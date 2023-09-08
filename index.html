@@ -12,8 +12,8 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <link href="./src/input.css" rel="stylesheet" />
-    <script src="./src/index.js"></script>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <script defer src="./src/index.js"></script>
     <title>Frontend Mentor | Notifications page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -28,7 +28,7 @@
             Notifications
           </h1>
           <span
-            class="bg-Blue text-white py-1 px-3 rounded-lg text-sm font-customMedium"
+            class="notification-number bg-Blue text-white py-1 px-3 rounded-lg text-sm font-customMedium"
             >3</span
           >
         </div>
@@ -39,7 +39,7 @@
         </p>
       </section>
       <section class="flex flex-col items-center mt-8">
-        <div class="unread-notification">
+        <div class="notification-container unread-notification-container">
           <div class="flex-initial">
             <img
               src="./assets/images/avatar-mark-webber.webp"
@@ -49,11 +49,7 @@
             />
           </div>
           <div class="flex-1">
-            <h1
-              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
-            >
-              Mark Webber
-            </h1>
+            <h1 class="notification-user-name">Mark Webber</h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               reacted to your recent post
               <a
@@ -65,7 +61,7 @@
             <p class="text-sm text-GrayishBlue">1m ago</p>
           </div>
         </div>
-        <div class="unread-notification">
+        <div class="unread-notification-container">
           <div class="flex-initial">
             <img
               src="./assets/images/avatar-angela-gray.webp"
@@ -75,18 +71,14 @@
             />
           </div>
           <div class="flex-1">
-            <h1
-              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
-            >
-              Angela Gray
-            </h1>
+            <h1 class="notification-user-name">Angela Gray</h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               followed you
             </p>
             <p class="text-sm text-GrayishBlue">5m ago</p>
           </div>
         </div>
-        <div class="unread-notification">
+        <div class="unread-notification-container">
           <div class="flex-initial">
             <img
               src="./assets/images/avatar-jacob-thompson.webp"
@@ -96,11 +88,7 @@
             />
           </div>
           <div class="flex-1">
-            <h1
-              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
-            >
-              Jacob Thompson
-            </h1>
+            <h1 class="notification-user-name">Jacob Thompson</h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               has joined your group
               <a
@@ -112,9 +100,7 @@
             <p class="text-sm text-GrayishBlue">1 day ago</p>
           </div>
         </div>
-        <div
-          class="flex flex-row w-full gap-3 items-start bg-white rounded-md p-3 my-2"
-        >
+        <div class="read-notification-container">
           <div class="flex-initial">
             <img
               src="./assets/images/avatar-rizky-hasanuddin.webp"
@@ -124,11 +110,7 @@
             />
           </div>
           <div class="flex-1">
-            <h1
-              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
-            >
-              Rizky Hasanuddin
-            </h1>
+            <h1 class="notification-user-name">Rizky Hasanuddin</h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               sent you a private message
             </p>
@@ -142,9 +124,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="flex flex-row w-full gap-3 items-start bg-white rounded-md p-3 my-2"
-        >
+        <div class="read-notification-container">
           <div class="flex-initial">
             <img
               src="./assets/images/avatar-kimberly-smith.webp"
@@ -154,11 +134,7 @@
             />
           </div>
           <div class="flex-1">
-            <h1
-              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
-            >
-              Kimberly Smith
-            </h1>
+            <h1 class="notification-user-name">Kimberly Smith</h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               commented on your picture
             </p>
@@ -175,9 +151,7 @@
             </a>
           </div>
         </div>
-        <div
-          class="flex flex-row w-full gap-3 items-start bg-white rounded-md p-3 my-2"
-        >
+        <div class="read-notification-container">
           <div class="flex-initial">
             <img
               src="./assets/images/avatar-nathan-peterson.webp"
@@ -187,11 +161,7 @@
             />
           </div>
           <div class="flex-1">
-            <h1
-              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
-            >
-              Nathan Peterson
-            </h1>
+            <h1 class="notification-user-name">Nathan Peterson</h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               reacted to your recent post
             </p>
@@ -203,9 +173,7 @@
             <p class="text-sm text-GrayishBlue">2 weeks ago</p>
           </div>
         </div>
-        <div
-          class="flex flex-row w-full gap-3 items-start bg-white rounded-md p-3 my-2"
-        >
+        <div class="read-notification-container">
           <div class="flex-initial">
             <img
               src="./assets/images/avatar-anna-kim.webp"
@@ -215,11 +183,7 @@
             />
           </div>
           <div class="flex-1">
-            <h1
-              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
-            >
-              Anna Kim
-            </h1>
+            <h1 class="notification-user-name">Anna Kim</h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               left the group
             </p>
