@@ -13,39 +13,33 @@
     />
 
     <link href="./src/input.css" rel="stylesheet" />
-
+    <script src="./src/index.js"></script>
     <title>Frontend Mentor | Notifications page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body class="sm:bg-slate-100">
     <div
-      class="container sm:bg-white h-auto xs:w-full xs:my-0 mx-auto p-5 rounded-md"
+      class="container xs:bg-white h-auto xs:w-full sm:w-2/4 mx-auto p-5 rounded-md sm:my-5"
     >
       <section class="flex flex-row justify-between items-center">
         <div class="flex justify-start items-center w-1/2">
           <h1 class="font-customExtrBold text-xl mr-2 text-VeryDarkBlue">
             Notifications
           </h1>
-          <span class="bg-Blue text-white py-1 px-3 rounded-lg text-sm">3</span>
+          <span
+            class="bg-Blue text-white py-1 px-3 rounded-lg text-sm font-customMedium"
+            >3</span
+          >
         </div>
-        <p class="flex-initial w-1/2 text-right text-sm text-DarkGrayishBlue">
+        <p
+          class="all-read flex-initial w-1/2 text-right text-sm text-DarkGrayishBlue hover:cursor-pointer hover:text-Blue"
+        >
           Mark all as read
         </p>
       </section>
       <section class="flex flex-col items-center mt-8">
-        <div
-          class="flex flex-row w-full gap-3 items-start bg-VeryLightGrayishBlue rounded-md p-3 my-2"
-        >
+        <div class="unread-notification">
           <div class="flex-initial">
             <img
               src="./assets/images/avatar-mark-webber.webp"
@@ -55,19 +49,23 @@
             />
           </div>
           <div class="flex-1">
-            <h1 class="font-customExtrBold text-sm inline mr-1">Mark Webber</h1>
+            <h1
+              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
+            >
+              Mark Webber
+            </h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               reacted to your recent post
-              <span class="text-DarkGrayishBlue font-customMedium"
-                >My first tournament today!</span
+              <a
+                href="#"
+                class="text-DarkGrayishBlue font-customMedium hover:cursor-pointer hover:text-Blue"
+                >My first tournament today!</a
               >
             </p>
             <p class="text-sm text-GrayishBlue">1m ago</p>
           </div>
         </div>
-        <div
-          class="flex flex-row w-full gap-3 items-start bg-VeryLightGrayishBlue rounded-md p-3 my-2"
-        >
+        <div class="unread-notification">
           <div class="flex-initial">
             <img
               src="./assets/images/avatar-angela-gray.webp"
@@ -77,16 +75,18 @@
             />
           </div>
           <div class="flex-1">
-            <h1 class="font-customExtrBold text-sm inline mr-1">Angela Gray</h1>
+            <h1
+              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
+            >
+              Angela Gray
+            </h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               followed you
             </p>
             <p class="text-sm text-GrayishBlue">5m ago</p>
           </div>
         </div>
-        <div
-          class="flex flex-row w-full gap-3 items-start bg-VeryLightGrayishBlue rounded-md p-3 my-2"
-        >
+        <div class="unread-notification">
           <div class="flex-initial">
             <img
               src="./assets/images/avatar-jacob-thompson.webp"
@@ -96,12 +96,18 @@
             />
           </div>
           <div class="flex-1">
-            <h1 class="font-customExtrBold text-sm inline mr-1">
+            <h1
+              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
+            >
               Jacob Thompson
             </h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               has joined your group
-              <span class="text-Blue font-customMedium">Chess Club</span>
+              <a
+                href="#"
+                class="text-Blue font-customMedium hover:cursor-pointer"
+                >Chess Club</a
+              >
             </p>
             <p class="text-sm text-GrayishBlue">1 day ago</p>
           </div>
@@ -118,7 +124,9 @@
             />
           </div>
           <div class="flex-1">
-            <h1 class="font-customExtrBold text-sm inline mr-1">
+            <h1
+              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
+            >
               Rizky Hasanuddin
             </h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
@@ -126,7 +134,7 @@
             </p>
             <p class="text-sm text-GrayishBlue">5 days ago</p>
             <p
-              class="text-DarkGrayishBlue text-sm border border-spacing-1 rounded-md mt-3 p-5"
+              class="text-DarkGrayishBlue text-sm border border-spacing-1 rounded-md mt-3 p-5 hover:bg-LightGrayishBlue2 hover:cursor-pointer"
             >
               Hello, thanks for setting up the Chess Club. I've been a member
               for a few weeks now and I'm already having lots of fun and
@@ -146,7 +154,9 @@
             />
           </div>
           <div class="flex-1">
-            <h1 class="font-customExtrBold text-sm inline mr-1">
+            <h1
+              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
+            >
               Kimberly Smith
             </h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
@@ -155,12 +165,14 @@
             <p class="text-sm text-GrayishBlue">1 week ago</p>
           </div>
           <div class="flex-none">
-            <img
-              src="./assets/images/image-chess.webp"
-              width="50"
-              height="50"
-              alt="image-chess"
-            />
+            <a href="#" class="hover:cursor-pointer">
+              <img
+                src="./assets/images/image-chess.webp"
+                width="50"
+                height="50"
+                alt="image-chess"
+              />
+            </a>
           </div>
         </div>
         <div
@@ -175,15 +187,19 @@
             />
           </div>
           <div class="flex-1">
-            <h1 class="font-customExtrBold text-sm inline mr-1">
+            <h1
+              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
+            >
               Nathan Peterson
             </h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               reacted to your recent post
             </p>
-            <span class="text-sm text-DarkGrayishBlue font-customMedium"
+            <a
+              href="#"
+              class="text-sm text-DarkGrayishBlue font-customMedium hover:cursor-pointer hover:text-Blue"
               >5 end-game strategies to increase your win rate
-            </span>
+            </a>
             <p class="text-sm text-GrayishBlue">2 weeks ago</p>
           </div>
         </div>
@@ -199,22 +215,31 @@
             />
           </div>
           <div class="flex-1">
-            <h1 class="font-customExtrBold text-sm inline mr-1">Anna Kim</h1>
+            <h1
+              class="font-customExtrBold text-sm inline mr-1 hover:cursor-pointer hover:text-Blue"
+            >
+              Anna Kim
+            </h1>
             <p class="text-sm text-GrayishBlue leading-normal inline">
               left the group
             </p>
-            <span class="text-sm text-Blue font-customMedium"> Chess Club</span>
+            <a
+              href="#"
+              class="text-sm text-Blue font-customMedium hover:cursor-pointer"
+            >
+              Chess Club</a
+            >
             <p class="text-sm text-GrayishBlue">2 weeks ago</p>
           </div>
         </div>
       </section>
     </div>
 
-    <!-- <div class="attribution">
+    <div class="text-center text-xs my-2">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+      >. Coded by <a class="text-Blue font-medium" href="#">Hoda Farahani</a>.
+    </div>
   </body>
 </html>
