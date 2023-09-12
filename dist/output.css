@@ -595,7 +595,7 @@ body{
   }
 }
 
-.unread-notification-container {
+.notification-container {
   margin-top:0.5rem;
   margin-bottom:0.5rem;
   display:flex;
@@ -604,9 +604,12 @@ body{
   align-items:flex-start;
   gap:0.75rem;
   border-radius:0.375rem;
+  padding:0.75rem;
+}
+
+.unread-notification-container {
   --tw-bg-opacity:1;
   background-color:hsl(210 60% 98% / var(--tw-bg-opacity));
-  padding:0.75rem;
 }
 
 .notification-user-name {
@@ -646,9 +649,9 @@ body{
   margin-right:auto;
 }
 
-.my-2 {
-  margin-top:0.5rem;
-  margin-bottom:0.5rem;
+.my-5 {
+  margin-top:1.25rem;
+  margin-bottom:1.25rem;
 }
 
 .mr-2 {

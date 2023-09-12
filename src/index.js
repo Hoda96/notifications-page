@@ -2,32 +2,30 @@
 
 const markAllRead = document.querySelector(".all-read");
 const notificationNumber = document.querySelector(".notification-number");
-const unreadNotificationContainer = document.querySelectorAll(
-  ".unread-notification-container"
+const notificationContainer = document.querySelectorAll(
+  ".notification-container"
 );
+console.log("notif-container", notificationContainer);
 
 let notifiNum = notificationNumber.textContent;
 
 // Mark all read
 markAllRead.addEventListener("click", function () {
-  unreadNotificationContainer.forEach((container) => {
+  notificationContainer.forEach((container) => {
     container.style.backgroundColor = "#FFF";
     notificationNumber.textContent = 0;
+    container.classList.remove("unread-notification-container");
   });
 });
 
 // Read each notification
-let seen = true;
-
-unreadNotificationContainer.forEach((container) => {
+notificationContainer.forEach((container) => {
   container.addEventListener("click", () => {
-    container.style.backgroundColor = "#fff";
+    if (container.classList.contains("unread-notification-container")) {
+      container.style.backgroundColor = "#fff";
+      notificationNumber.textContent = notificationNumber.textContent - 1;
 
-    // container.classList.remove("bg-VeryLightGrayishBlue");
-    // container.classList.add("bg-white");
-
-    notificationNumber.textContent = notificationNumber.textContent - 1;
-
-    // if (notificationNumber < 0) return;
+      container.classList.remove("unread-notification-container");
+    }
   });
 });
