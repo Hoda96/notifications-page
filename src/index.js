@@ -9,7 +9,7 @@ const notificationContainer = document.querySelectorAll(
 // Mark all read
 markAllRead.addEventListener("click", function () {
   notificationContainer.forEach((container) => {
-    // seen.classList.remove("not-seen");
+
 
     container.style.backgroundColor = "#FFF";
     notificationNumber.textContent = 0;
@@ -23,7 +23,6 @@ markAllRead.addEventListener("click", function () {
 notificationContainer.forEach((container) => {
   container.addEventListener("click", () => {
     if (container.classList.contains("unread-notification-container")) {
-      // seen.classList.remove("not-seen");
 
       container.style.backgroundColor = "#fff";
       notificationNumber.textContent = notificationNumber.textContent - 1;
