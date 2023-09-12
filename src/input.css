@@ -36,4 +36,7 @@
     .read-notification-container{
         @apply  bg-white
     }
+    .not-seen{
+        @apply w-2 h-2 bg-Red rounded-lg inline-block
+    }
 }
