@@ -6,8 +6,6 @@ const notificationContainer = document.querySelectorAll(
   ".notification-container"
 );
 
-const seen = document.querySelectorAll("span.not-seen");
-
 // Mark all read
 markAllRead.addEventListener("click", function () {
   notificationContainer.forEach((container) => {
@@ -16,6 +14,8 @@ markAllRead.addEventListener("click", function () {
     container.style.backgroundColor = "#FFF";
     notificationNumber.textContent = 0;
     container.classList.remove("unread-notification-container");
+    const seen = document.querySelectorAll("span.not-seen")[0];
+    seen.classList.remove("not-seen");
   });
 });
 
@@ -28,6 +28,8 @@ notificationContainer.forEach((container) => {
       container.style.backgroundColor = "#fff";
       notificationNumber.textContent = notificationNumber.textContent - 1;
       container.classList.remove("unread-notification-container");
+      const seen = document.querySelectorAll("span.not-seen")[0];
+      seen.classList.remove("not-seen");
     }
   });
 });
